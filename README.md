@@ -7,6 +7,7 @@ This project motivated by "so_long" which is 42 subject is a very small 2D game.
 2. Attach Reinforencd Learning to this game
 
 ## Reference
-- [x] https://programmers.co.kr/learn/courses/1  
-	![썸네일](/study/programmers/thumnail.png) 
-- [ ] https://github.com/MijeongJeon
+- [x] [Introduction of 3D with Unity](https://programmers.co.kr/learn/courses/1)  
+	![썸네일](/study/programmers/thumnail.png)
+- [ ] [Pokémon](https://youtu.be/_Pm16a18zy8)
+- [ ] [친절한 AI](https://github.com/MijeongJeon)
