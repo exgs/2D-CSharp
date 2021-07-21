@@ -7,13 +7,14 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private bool isMoving;
     private Vector2 input;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    private void Update()
+    private Animator animator;
+	private void Awake()
+	{
+        animator = GetComponent<Animator>();
+	}
+
+	private void Update()
     {
         if (!isMoving)
         {
@@ -23,12 +24,15 @@ public class PlayerController : MonoBehaviour
                 input.y = 0;
             if (input != Vector2.zero)
 			{
+                animator.SetFloat("moveX", input.x);
+                animator.SetFloat("moveY", input.y);
                 var targetPos = transform.position; // Vector2 or Vector3
                 targetPos.x += input.x;
                 targetPos.y += input.y;
                 StartCoroutine(Move(targetPos));
 			}
         }
+        animator.SetBool("isMoving", isMoving);
     }
 
     IEnumerator Move(Vector3 targetPos)
